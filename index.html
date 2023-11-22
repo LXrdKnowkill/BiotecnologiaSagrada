@@ -543,9 +543,33 @@ já foi escrito até novembro dia 9/11/23, parte do Artigo Científico em desenv
  <div class="section-title">
  <h2>Grafico Responsivo, fase de testes, Alpha1.0.1 .</h2>
  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
- <p> Projeto já está pronto, só estamos fazendo os primeiros testes para enviar aqui . Dia 28/10/2023</p>
- 
+  <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["PLanta", "Frasasance", "Spain", "USA", "Argentina"];
+var yValues = [55, 49, 44, 24, 222];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Partes Das suculentas "
+    }
+  }
+});
+</script>
 
 
 
